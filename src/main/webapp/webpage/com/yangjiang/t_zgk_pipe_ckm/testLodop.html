@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>testLodop.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+  	<script type="text/javascript" src="../../../../plug-in/lodop/LodopFuncs.js"></script>
+  	<object id="LODOP_OB" classid="clsid:2105C259-1E0C-4534-8141-A753534CB4CA" width=0 height=0>  
+            <embed id="LODOP_EM" type="application/x-print-lodop" width=0 height=0></embed>  
+    </object>
+   
+     
+  </head>
+  
+  <body>
+    <script language="javascript">
+     	var oscript = document.createElement("script");
+	    oscript.src ="http://localhost:8000/CLodopfuncs.js?priority=1";
+	    var head = document.head || document.getElementsByTagName("head")[0] || document.documentElement;
+	    head.insertBefore( oscript,head.firstChild );  
+        var LODOP = getLodop(document.getElementById('LODOP_OB'), document.getElementById('LODOP_EM'));  
+    </script>
+    	<button type="button" onclick="design()">  
+            设计模板  
+        </button>  
+              
+        <button type="button" onclick="view()">  
+            打印预览  
+        </button>  
+        <br>  
+        <textarea id="templateCode" cols="100" rows="30" style="background-color: #fff;"></textarea>
+  </body>
+  <script type="text/javascript">  
+    function view() {  
+        init();  
+        LODOP.SET_SHOW_MODE("BKIMG_IN_PREVIEW",1);  
+        LODOP.PREVIEW();  
+    }  
+    function design() {  
+        init();  
+        document.getElementById('templateCode').value=LODOP.PRINT_DESIGN();  
+    } 
+     
+LODOP.PRINT_INITA(0,0,1240,1754,"打印跟踪卡");
+LODOP.ADD_PRINT_SETUP_BKIMG("C:\\Users\\Administrator\\Desktop\\861514061073288475.jpg");
+LODOP.SET_SHOW_MODE("BKIMG_IN_PREVIEW",true);
+LODOP.SET_SHOW_MODE("BKIMG_PRINT",true);
+LODOP.ADD_PRINT_TEXT(213,116,100,20,"529600");
+LODOP.ADD_PRINT_TEXT(194,121,100,20,"telephone");
+LODOP.ADD_PRINT_TEXT(173,119,171,20,"address");
+LODOP.ADD_PRINT_TEXT(149,111,145,20,"cdkey");
+LODOP.ADD_PRINT_TEXT(150,385,135,20,"date1");
+LODOP.ADD_PRINT_TEXT(169,354,100,20,"org_name");
+LODOP.ADD_PRINT_TEXT(188,343,100,20,"planNo");
+LODOP.ADD_PRINT_TEXT(210,343,74,20,"manager");
+LODOP.ADD_PRINT_TEXT(209,450,69,20,"manager");
+LODOP.SET_PRINT_STYLEA(0,"Horient",1);
+LODOP.ADD_PRINT_TEXT(242,121,158,20,"输水用球墨铸铁管");
+LODOP.ADD_PRINT_TEXT(260,123,157,20,"广东新兴铸管一库");
+LODOP.ADD_PRINT_TEXT(280,121,100,20,"transCo");
+LODOP.ADD_PRINT_TEXT(299,120,100,20,"carNo");
+LODOP.ADD_PRINT_TEXT(318,120,100,20,"driverName");
+LODOP.ADD_PRINT_TEXT(237,344,173,20,"receiveDepartment");
+LODOP.ADD_PRINT_TEXT(255,342,100,20,"sendDate");
+LODOP.ADD_PRINT_TEXT(277,344,100,20,"receivePlace");
+LODOP.ADD_PRINT_TEXT(297,340,100,20,"receiver");
+LODOP.ADD_PRINT_TEXT(318,341,100,20,"receiverPhone");
+LODOP.ADD_PRINT_TEXT(367,77,57,20,"orderId");
+LODOP.ADD_PRINT_TEXT(365,132,64,20,"Dn");
+LODOP.ADD_PRINT_TEXT(364,199,44,20,"length");
+LODOP.ADD_PRINT_TEXT(364,248,45,20,"num");
+LODOP.ADD_PRINT_TEXT(359,358,57,20,"DN2");
+LODOP.ADD_PRINT_TEXT(362,295,57,20,"OrderId2");
+LODOP.ADD_PRINT_TEXT(363,428,44,20,"num2");
+LODOP.ADD_PRINT_TEXT(362,475,45,20,"nnm2");
+LODOP.ADD_PRINT_TEXT(460,426,100,20,"storeKeeper");
+LODOP.ADD_PRINT_TEXT(462,134,100,20,"sumNum");
+LODOP.ADD_PRINT_TEXT(561,194,191,20,"entruckQC");
+
+
+</script>
